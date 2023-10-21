@@ -17,7 +17,10 @@ const InputSearch = () => {
     const handleSearch = () => {
         event.preventDefault()
         const keyword = searchRef.current.value
-
+        if(keyword == "") {
+            alert("Please insert your search data")
+            return
+        }
         router.push(`/search/${keyword}`)
     }
 
