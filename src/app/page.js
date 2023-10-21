@@ -1,7 +1,7 @@
 import AnimeList from "@/components/AnimeList"
 import Header from "@/components/AnimeList/Header"
 
-const Home = async () => {
+const Page = async () => {
 
   const params = {
     limit: 8
@@ -22,4 +22,4 @@ const Home = async () => {
   )
 }
 
-export default Home
+export default Page
