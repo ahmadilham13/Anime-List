@@ -1,5 +1,5 @@
 import AnimeDetail from "@/components/AnimeDetail"
-import { getAnimeResponse } from "../libs/api-libs"
+import { getAnimeResponse } from "@/app/libs/api-libs"
 
 const Page = async ({params}) => {
     const {id} = params
