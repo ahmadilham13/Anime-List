@@ -1,11 +1,13 @@
-import AnimeList from "@/components/AnimeList"
-import Header from "@/components/AnimeList/Header"
-import AnimeRecomList from "@/components/AnimeRecomList"
-import { getAnimeResponse } from "./libs/api-libs"
+import DataList from "@/components/DataList"
+import Header from "@/components/DataList/Header"
+import DataRecomList from "@/components/DataRecomList"
+import { getAnimeResponse } from "./libs/animeApiLibs"
+import { getMangaResponse } from "./libs/mangaApiLibs"
 
 const Page = async () => {
 
   const topAnime = await getAnimeResponse("top/anime", "limit=8")
+  const topManga = await getMangaResponse("top/manga", "limit=8")
   const recommendAnime = await getAnimeResponse("recommendations/anime")
 
   return (
@@ -16,15 +18,15 @@ const Page = async () => {
         <div className="md:col-span-9">
           <div className="mx-auto w-full">
             <div className="container my-8">
-              <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat Semua"/>
-              <AnimeList api={topAnime}/>
+              <Header title="Anime Populer" linkHref="/populer" linkTitle="Lihat Semua"/>
+              <DataList api={topAnime}/>
             </div>
           </div>
 
           <div className="mx-auto w-full">
             <div className="container my-8">
-              <Header title="Rekomendasi Anime" linkHref="/rekomendasi" linkTitle="Lihat Semua"/>
-              <AnimeList api={topAnime}/>
+              <Header title="Manga Populer" linkHref="/rekomendasi" linkTitle="Lihat Semua"/>
+              <DataList api={topManga}/>
             </div>
           </div>
         </div>
@@ -32,7 +34,7 @@ const Page = async () => {
           <div className="p-2">
             <Header title="Rekomendasi Anime"/>
           </div>
-          <AnimeRecomList api={recommendAnime}/>
+          <DataRecomList api={recommendAnime}/>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const AnimeRecomList = ({api}) => {
+const DataRecomList = ({api}) => {
     return (
         <div className="flex flex-col h-screen overflow-x-scroll no-scrollbar">
             {api.data.map((anime, index) => {
@@ -20,4 +20,4 @@ const AnimeRecomList = ({api}) => {
     )
 }
 
-export default AnimeRecomList
+export default DataRecomList

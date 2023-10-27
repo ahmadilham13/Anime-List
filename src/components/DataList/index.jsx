@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const AnimeList = ({api}) => {
+const DataList = ({api}) => {
     return (
         <div id="scrollContainer" className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8 no-scrollbar">
             {api.data?.map((anime, index) => {
@@ -27,4 +27,4 @@ const AnimeList = ({api}) => {
     )
 }
 
-export default AnimeList
+export default DataList

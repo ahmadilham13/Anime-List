@@ -1,6 +1,6 @@
-import { getAnimeResponse } from "@/app/libs/api-libs"
-import AnimeList from "@/components/AnimeList"
-import Header from "@/components/AnimeList/Header"
+import { getAnimeResponse } from "@/app/libs/animeApiLibs"
+import DataList from "@/components/DataList"
+import Header from "@/components/DataList/Header"
 
 const Page = async ({params}) => {
 
@@ -13,7 +13,7 @@ const Page = async ({params}) => {
     <>
       <section>
         <Header title={`Pencarian untuk : ${decodedKeyword}`}/>
-        <AnimeList api={searchAnime} />
+        <DataList api={searchAnime} />
       </section>
     </>
   )

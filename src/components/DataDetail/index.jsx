@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const AnimeDetail = ({api}) => {
+const DataDetail = ({api}) => {
     return (
         <div className="min-h-screen bg-gray-100 py-6 flex flex-col sm:py-12">
             <div className="py-3 sm:max-w-xl sm:mx-auto">
@@ -79,4 +79,4 @@ const AnimeDetail = ({api}) => {
     )
 }
 
-export default AnimeDetail
+export default DataDetail
