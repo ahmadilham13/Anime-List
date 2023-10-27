@@ -1,5 +1,5 @@
-import DataList from "@/components/DataList"
-import Header from "@/components/DataList/Header"
+import AnimeList from "@/components/DataList/Anime"
+import Header from "@/components/DataList/Anime/Header"
 import DataRecomList from "@/components/DataRecomList"
 import { getAnimeResponse } from "./libs/animeApiLibs"
 import { getMangaResponse } from "./libs/mangaApiLibs"
@@ -19,14 +19,14 @@ const Page = async () => {
           <div className="mx-auto w-full">
             <div className="container my-8">
               <Header title="Anime Populer" linkHref="/populer" linkTitle="Lihat Semua"/>
-              <DataList api={topAnime}/>
+              <AnimeList api={topAnime}/>
             </div>
           </div>
 
           <div className="mx-auto w-full">
             <div className="container my-8">
               <Header title="Manga Populer" linkHref="/rekomendasi" linkTitle="Lihat Semua"/>
-              <DataList api={topManga}/>
+              <AnimeList api={topManga}/>
             </div>
           </div>
         </div>

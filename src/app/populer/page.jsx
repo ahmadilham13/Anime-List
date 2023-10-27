@@ -1,6 +1,6 @@
 'use client'
 
-import DataList from "@/components/DataList"
+import AnimeList from "@/components/DataList/Anime"
 import HeaderMenu from "@/components/Utilities/HeaderMenu"
 import Pagination from "@/components/Utilities/Pagination"
 import { useEffect, useState } from "react"
@@ -24,7 +24,7 @@ const Page = () => {
     return (
         <>
         <HeaderMenu title={`ANIME TERPOPULER #${page}`} />
-        <DataList api={allAnime} />
+        <AnimeList api={allAnime} />
         <Pagination 
             page={page} 
             lastPage={allAnime.pagination?.last_visible_page} 
