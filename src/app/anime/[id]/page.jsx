@@ -1,5 +1,5 @@
 import DataDetail from "@/components/DataDetail"
-import { getAnimeResponse } from "@/app/libs/animeApiLibs"
+import { getAnimeResponse } from "@/libs/animeApiLibs"
 
 const Page = async ({params: {id}}) => {
 

@@ -1,8 +1,8 @@
 import AnimeList from "@/components/DataList/Anime"
 import Header from "@/components/DataList/Anime/Header"
 import DataRecomList from "@/components/DataRecomList"
-import { getAnimeResponse } from "./libs/animeApiLibs"
-import { getMangaResponse } from "./libs/mangaApiLibs"
+import { getAnimeResponse } from "../libs/animeApiLibs"
+import { getMangaResponse } from "../libs/mangaApiLibs"
 
 const Page = async () => {
 
