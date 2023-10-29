@@ -1,6 +1,6 @@
 import AnimeList from "@/components/AnimeList"
 import Header from "@/components/AnimeList/Header"
-import { getAnimeResponse } from "./libs/ApiAnimeLibs"
+import { getAnimeResponse } from "../libs/ApiAnimeLibs"
 
 const Page = async () => {
   const topAnime = await getAnimeResponse("top/anime", "limit=8")
