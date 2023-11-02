@@ -17,7 +17,7 @@ const InputSearch = () => {
     const handleSearch = () => {
         event.preventDefault()
         const keyword = searchRef.current.value
-        if(keyword == "") {
+        if(keyword.trim() == "") {
             alert("Please insert your search data")
             return
         }
