@@ -1,6 +1,7 @@
 import Link from "next/link"
 import InputSearch from "./InputSearch"
 import Image from "next/image"
+import UserActionButton from "./UserActionButton"
 
 const Navbar = () => {
     return (
@@ -9,7 +10,10 @@ const Navbar = () => {
                 <Link href="/" className="font-bold text-2xl">
                     <Image src="/img/logo.png" width={80} height={10} className="px-2"/>
                 </Link>
-                <InputSearch />
+                <div className="flex flex-row gap-2">
+                    <UserActionButton />
+                    <InputSearch />
+                </div>
             </div>
         </header>
     )
