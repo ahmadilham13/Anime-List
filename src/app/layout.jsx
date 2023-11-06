@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 const gabarito = Gabarito({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'MYANIMELIST',
+  title: 'ILM ANIME',
   description: 'Website Anime Indonesia',
 }
 
