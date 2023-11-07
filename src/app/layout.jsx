@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">     
-      <body className={`${gabarito.className} bg-customColor-dark`} suppressHydrationWarning={true}>
+      <body className={`${gabarito.className} bg-[url('/img/bg-img.jpg')] backdrop-blur-xl md:backdrop-blur-xl md:min-h-screen`} suppressHydrationWarning={true}>
         <Navbar />
         {children}
       </body>

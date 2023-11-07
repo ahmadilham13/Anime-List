@@ -32,7 +32,7 @@ const Page = async () => {
             </div>
           </div>
         </div>
-        <div className="bg-customColor-secondary md:col-span-3 w-full">
+        <div className="bg-customColor-secondary bg-opacity-60 md:col-span-3 w-full">
           <div className="p-2">
             <Header title="Rekomendasi Anime"/>
           </div>

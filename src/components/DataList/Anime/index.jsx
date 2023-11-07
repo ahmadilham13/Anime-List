@@ -6,7 +6,7 @@ const AnimeList = ({api}) => {
         <div id="scrollContainer" className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8 no-scrollbar">
             {api.data?.map((anime, index) => {
                 return (
-                    <div key={index} className="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 border rounded-lg max-h-140 bg-customColor-primary">
+                    <div key={index} className="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 rounded-lg max-h-140 shadow-xl bg-customColor-primary bg-opacity-60">
                         <Link href={`/anime/${anime.mal_id}`} className="space-y-2">
                             <div className="relative aspect-w-16 aspect-h-9">
                                 <Image src={anime.images.webp.image_url} width={350} height={350} className="object-cover w-full max-h-64 shadow-md hover:shadow-xl rounded-lg" alt="..."/>
