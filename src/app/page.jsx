@@ -1,7 +1,7 @@
 import AnimeList from "@/components/DataList/Anime"
 import Header from "@/components/DataList/Anime/Header"
 import DataRecomList from "@/components/DataRecomList"
-import { getAnimeResponse, getNestedAnimeResponse } from "../libs/animeApiLibs"
+import { getAnimeResponse, getNestedAnimeResponse, reproduce } from "../libs/animeApiLibs"
 import { getMangaResponse } from "../libs/mangaApiLibs"
 
 const Page = async () => {
@@ -10,7 +10,7 @@ const Page = async () => {
   const topManga = await getMangaResponse("top/manga", "limit=8")
   let recommendAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
 
-  recommendAnime = {data: recommendAnime.slice(0, 8)}
+  recommendAnime = reproduce(recommendAnime, 10)
 
   return (
     <>
