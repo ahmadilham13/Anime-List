@@ -4,9 +4,6 @@ import {redirect} from "next/navigation"
 
 const Page = async() => {
     const user = await authUserSession()
-    if(!user) {
-        redirect('/not-found')
-    }
 
     return (
         <div className="text-customColor-primary">
